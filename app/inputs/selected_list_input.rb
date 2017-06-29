@@ -89,6 +89,6 @@ class SelectedListInput < Formtastic::Inputs::StringInput
   end
 
   def relation_name
-    method.to_s.chomp("_ids").tableize
+    @options[:relation_name] || method.to_s.chomp("_ids").tableize
   end
 end
